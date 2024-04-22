@@ -39,3 +39,10 @@ From the image above, we can see that there are three spikes in the second chart
 ![slow subscriber](images/slow_subscriber.png)
 
 I made the subscriber slower by enforcing it to sleep for every process. The total number of queued messages after running `cargo run` five times is 20, which indicates how many messages are still in the queue at that current time, before they get handled by the subsciber.
+
+### Running at least three subscribers
+
+![three subscribers](images/three_subscribers.png)
+![rabbitmq three subscribers](images/rabbitmq_three_subscribers.png)
+
+The spike in the queued messages chart is smaller and decrease quicker. Since there are three subscribers, the message broker can distribute the messages in the queue to all three subscribers at one time making it much faster than only having one subscriber.
