@@ -33,3 +33,9 @@ When we run subscriber and publisher with `cargo run`, the publisher will send f
 ![repeated publisher run](images/repeated_publisher_run.png)
 
 From the image above, we can see that there are three spikes in the second chart. The first spike shows up when I try to run `cargo run` three times in rapid succession and peaks at 3.0/s, the second and third spikes appear when I try to run `cargo run` two times with a longer interval and both of them peaks at 1.0/s. Based on my observation, the spikes tell us how many messages were running through the system at that current time.
+
+### Simulation slow subscriber
+
+![slow subscriber](images/slow_subscriber.png)
+
+I made the subscriber slower by enforcing it to sleep for every process. The total number of queued messages after running `cargo run` five times is 20, which indicates how many messages are still in the queue at that current time, before they get handled by the subsciber.
