@@ -26,4 +26,10 @@ It means that both subscriber and publisher programs are connected to the same m
 #### Publisher Console
 ![publisher console](images/cargo_run_publisher.png)
 
-When we run subcriber and publisher with `cargo run`, the publisher will send five messages to RabbitMQ, the subscriber will listen and prints all the messages in its console.
+When we run subscriber and publisher with `cargo run`, the publisher will send five messages to RabbitMQ, and the subscriber will listen and print all the messages in its console.
+
+### Monitoring chart based on publisher
+
+![repeated publisher run](images/repeated_publisher_run.png)
+
+From the image above, we can see that there are three spikes in the second chart. The first spike shows up when I try to run `cargo run` three times in rapid succession and peaks at 3.0/s, the second and third spikes appear when I try to run `cargo run` two times with a longer interval and both of them peaks at 1.0/s. Based on my observation, the spikes tell us how many messages were running through the system at that current time.
