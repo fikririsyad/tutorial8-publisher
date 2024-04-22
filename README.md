@@ -16,4 +16,14 @@ It means that both subscriber and publisher programs are connected to the same m
 
 ### Running RabbitMQ as message broker
 
-![running_rabbitmq](images/running_rabbitmq.png)
+![running rabbitmq](images/running_rabbitmq.png)
+
+### Sending and processing event
+
+#### Subscriber console
+![subscriber console](images/cargo_run_subscriber.png)
+
+#### Publisher Console
+![publisher console](images/cargo_run_publisher.png)
+
+When we run subcriber and publisher with `cargo run`, the publisher will send five messages to RabbitMQ, the subscriber will listen and prints all the messages in its console.
