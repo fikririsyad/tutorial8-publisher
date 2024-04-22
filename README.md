@@ -13,3 +13,7 @@ The program will send five data to the message broker in one run because, in the
 > b. The URL 'amqp://guest:guest@localhost:5672' in the subscriber program is the same as in the publisher program, and what does it mean?
 
 It means that both subscriber and publisher programs are connected to the same message broker.
+
+### Running RabbitMQ as message broker
+
+![running_rabbitmq](images/running_rabbitmq.png)
